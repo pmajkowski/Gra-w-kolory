@@ -73,6 +73,6 @@ const returnClick=(target)=>{
         document.querySelector('#but3').style.display='inline-block';
         document.querySelector('#but4').style.display='none';
         document.querySelector('#start-text').innerText=' ';
-        document.querySelector('#nazwa-koloru').innerText='Zagraj w grę, w której Twoim zadaniem będzie odgadnięcie koloru jak największej liczby kolorów w ciągu 20 sekund. Be a champ!';
+        document.querySelector('#nazwa-koloru').innerText='Zagraj w grę, w której Twoim zadaniem będzie odgadnięcie jak największej liczby kolorów w ciągu 20 sekund. Be a champ!';
         document.querySelector('#nazwa-koloru').style.color='black';
 }
