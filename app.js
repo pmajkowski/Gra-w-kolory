@@ -42,7 +42,7 @@ const startClick=(target)=>{
         document.querySelector('#summary').innerText=' ';
         document.querySelector('#nazwa-koloru').innerText=' ';
         document.querySelector('#but4').style.display='inline-block';
-    },3000)
+    },20000)
     document.querySelector('#but2').style.display='inline-block';
     document.querySelector('#but3').style.display='inline-block';
         document.querySelector('#summary').innerText=0;
