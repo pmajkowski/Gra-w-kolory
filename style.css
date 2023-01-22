@@ -1,0 +1,25 @@
+body{
+    background: rgb(231, 214, 214);
+text-align: center;
+position: relative;
+}
+#container {
+    background: white;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 200px;
+    top:100px;
+}
+#summary{
+    background-color: #fff;
+}
+#nazwa-koloru{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#but4{
+    display: none;
+}
