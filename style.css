@@ -5,7 +5,7 @@ position: relative;
 }
 #container {
     background: white;
-    height: 200px;
+    height: 250px;
     width: 200px;
     position: absolute;
     left: 200px;
@@ -25,4 +25,7 @@ position: relative;
 }
 #but4{
     display: none;
+}
+#player{
+    padding: 10px;
 }

@@ -21,7 +21,23 @@
 // // losowa do 20 i całkowita
 // val=Math.ceil(Math.random()*20);
 let palette =['red','green','black','pink','orange','grey','blue','yellow'];
-
+let usersList=[];
+let player;
+function addUser(event){
+    let userName = document.querySelector('#user').value;
+    let checkUser = usersList.find((user)=>{user == userName});
+    console.log(checkUser);
+    if(checkUser !== userName){
+    usersList.push(userName);
+    player = {name:userName,score:0}
+    document.querySelector('#player').innerText=`${userName}: ${player.score} pkt.`;
+    } else{
+        document.querySelector('#player').innerText='Taki gracz juz istnieje';
+    }
+    document.querySelector('#user').value='';
+    console.log(usersList);
+    console.log(player);
+}
 const startRandom=()=>
 {
 let val1 = Math.floor(Math.random()*8)
