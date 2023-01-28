@@ -68,7 +68,7 @@ const startClick=(target)=>{
         player.score+=result;
         document.querySelector('#player').innerText=`${player.name}: ${player.score} pkt.`;
         console.log(playersList);
-    },5000)
+    },20000)
     document.querySelector('#but2').style.display='inline-block';
     document.querySelector('#but3').style.display='inline-block';
         document.querySelector('#summary').innerText=' ';
