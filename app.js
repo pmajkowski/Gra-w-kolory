@@ -23,20 +23,24 @@
 let palette =['red','green','black','pink','orange','grey','blue','yellow'];
 let usersList=[];
 let player;
+let playersList=[];
+// let result=0;
 function addUser(event){
     let userName = document.querySelector('#user').value;
-    let checkUser = usersList.find((user)=>{user == userName});
-    console.log(checkUser);
+    let checkUser = usersList.find((user)=>user == userName);
+    // console.log(checkUser);
     if(checkUser !== userName){
     usersList.push(userName);
     player = {name:userName,score:0}
+    playersList.push(player);
     document.querySelector('#player').innerText=`${userName}: ${player.score} pkt.`;
     } else{
-        document.querySelector('#player').innerText='Taki gracz juz istnieje';
+        document.querySelector('#player').innerText=`${userName}: ${player.score} pkt.`;
     }
     document.querySelector('#user').value='';
     console.log(usersList);
     console.log(player);
+
 }
 const startRandom=()=>
 {
@@ -61,7 +65,10 @@ const startClick=(target)=>{
         document.querySelector('#summary').innerText=' ';
         document.querySelector('#nazwa-koloru').innerText=' ';
         document.querySelector('#but4').style.display='inline-block';
-    },20000)
+        player.score+=result;
+        document.querySelector('#player').innerText=`${player.name}: ${player.score} pkt.`;
+        console.log(playersList);
+    },5000)
     document.querySelector('#but2').style.display='inline-block';
     document.querySelector('#but3').style.display='inline-block';
         document.querySelector('#summary').innerText=' ';
@@ -105,4 +112,5 @@ const returnClick=(target)=>{
         document.querySelector('#nazwa-koloru').innerText='Zagraj w grę, w której Twoim zadaniem będzie odgadnięcie jak największej liczby kolorów w ciągu 20 sekund. Be a champ!';
         document.querySelector('#nazwa-koloru').style.color='black';
         document.querySelector('#summary').innerText=0;
+        document.querySelector('#player').innerText=' ';
 }
